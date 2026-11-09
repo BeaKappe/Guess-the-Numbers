@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+
+
+    <div class="Titolo text-center my-4">
+        <h1>Number Guessing Game</h1>
+        <h2>
+            <i id="icona-freccia" onclick="mostraIstruzioni()" class="bi bi-arrow-right-circle"></i> Istruzioni
+        </h2>
+        <p class="d-none" id="rimuovi">
+            Il Computer genera un numero compreso tra 0 e 100. Tu dovrai indovinarlo. Hai a disposizione 7 tentativi.
+        </p>
+        <button onclick="start()" class="btn btn-primary mt-2">
+            Gioca
+        </button>
+    </div>
+
+
+    <div class="container">
+        <div id="sezione-gioco" class="row text-center d-none my-5">
+            <div class="col-12 mb-3">
+                <form onsubmit="event.preventDefault(); check();">
+                    <input type="number" id="input" class="w-25" placeholder="0-100">
+                    <button onclick="check()" type="button" class="btn btn-success ms-2">Check</button>
+                </form>
+            </div>
+
+
+            <div class="col-4">
+                <h3>Tentativi Rimasti</h3>
+                <i class="bi bi-joystick fs-3"></i>
+                <p id="tentativi" class="fs-4 fw-bold"></p>
+            </div>
+            <div class="col-4">
+                <h3>Suggerimenti</h3>
+                <i class="bi bi-info-square fs-3"></i>
+                <p id="suggerimento" class="fs-5"></p>
+            </div>
+            <div class="col-4">
+                <h3>Numeri Inseriti</h3>
+                <i class="bi bi-pencil-square fs-3"></i>
+                <p id="numeri" class="fs-5"></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+
+
+</body>
+
+</html>
